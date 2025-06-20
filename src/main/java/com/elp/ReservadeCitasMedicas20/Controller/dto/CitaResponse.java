@@ -1,6 +1,8 @@
 package com.elp.ReservadeCitasMedicas20.Controller.dto;
 
-
+import com.elp.ReservadeCitasMedicas20.Model.Consultorio;
+import com.elp.ReservadeCitasMedicas20.Model.Medico;
+import com.elp.ReservadeCitasMedicas20.Model.Paciente;
 
 public class CitaResponse {
 	
@@ -8,7 +10,29 @@ public class CitaResponse {
 	private String fecha_cita;
 	private String horario_cita;
 	private String estado_cita;
+	private Medico medico;
+	private Paciente paciente;
+	private Consultorio consultorio;
 	
+	
+	public Medico getMedico() {
+		return medico;
+	}
+	public void setMedico(Medico medico) {
+		this.medico = medico;
+	}
+	public Paciente getPaciente() {
+		return paciente;
+	}
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
+	}
+	public Consultorio getConsultorio() {
+		return consultorio;
+	}
+	public void setConsultorio(Consultorio consultorio) {
+		this.consultorio = consultorio;
+	}
 	public Long getId_cita() {
 		return id_cita;
 	}
