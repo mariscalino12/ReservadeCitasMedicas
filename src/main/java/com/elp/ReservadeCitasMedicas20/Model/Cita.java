@@ -27,15 +27,15 @@ public class Cita {
 	private String estado_cita;
 
 	@ManyToOne
-	@JoinColumn(name = "id_paciente", insertable = false, updatable = false)
+	@JoinColumn(name = "id_paciente")
 	private Paciente paciente;
 
 	@ManyToOne
-	@JoinColumn(name = "id_medico", insertable = false, updatable = false)
+	@JoinColumn(name = "id_medico")
 	private Medico medico;
 
 	@ManyToOne
-	@JoinColumn(name = "id_consultorio", insertable = false, updatable = false)
+	@JoinColumn(name = "id_consultorio")
 	private Consultorio consultorio;
 
 	public Long getId_cita() {
