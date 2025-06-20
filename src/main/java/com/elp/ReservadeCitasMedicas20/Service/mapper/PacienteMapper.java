@@ -3,9 +3,12 @@ package com.elp.ReservadeCitasMedicas20.Service.mapper;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import org.springframework.stereotype.Component;
+
 import com.elp.ReservadeCitasMedicas20.Controller.dto.PacienteResponse;
 import com.elp.ReservadeCitasMedicas20.Model.Paciente;
 
+@Component
 public class PacienteMapper {
 
 	public Collection<PacienteResponse> toListPacienteToPacienteResponse(Collection<Paciente> listPaciente) {

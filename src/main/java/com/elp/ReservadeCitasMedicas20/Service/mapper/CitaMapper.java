@@ -3,9 +3,12 @@ package com.elp.ReservadeCitasMedicas20.Service.mapper;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import org.springframework.stereotype.Component;
+
 import com.elp.ReservadeCitasMedicas20.Controller.dto.CitaResponse;
 import com.elp.ReservadeCitasMedicas20.Model.Cita;
 
+@Component
 public class CitaMapper {
 
 	public Collection<CitaResponse> toListConsultorioToConsultorioResponse(Collection<Cita> listCita) {
