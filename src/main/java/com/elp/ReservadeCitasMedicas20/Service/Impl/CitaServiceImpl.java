@@ -36,6 +36,9 @@ public class CitaServiceImpl implements CItaService{
 		citaNew.setFecha_cita(request.getFecha_cita());
 		citaNew.setHorario_cita(request.getHorario_cita());
 		citaNew.setEstado_cita(request.getEstado_cita());
+		citaNew.setMedico(request.getMedico());
+		citaNew.setConsultorio(request.getConsultorio());
+		citaNew.setPaciente(request.getPaciente());
 		citaRepository.save(citaNew);
 	}
 	@Override
@@ -45,6 +48,9 @@ public class CitaServiceImpl implements CItaService{
 			cita.setFecha_cita(request.getFecha_cita());
 			cita.setHorario_cita(request.getHorario_cita());
 			cita.setEstado_cita(request.getEstado_cita());
+			cita.setMedico(request.getMedico());
+			cita.setConsultorio(request.getConsultorio());
+			cita.setPaciente(request.getPaciente());
 			citaRepository.save(cita);
 		}
 	}
