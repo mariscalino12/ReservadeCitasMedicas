@@ -21,7 +21,7 @@ public class MedicoController {
 
     @GetMapping("/medicos")
     public ResponseEntity<Collection<MedicoResponse>> getMedico(){
-        return  ResponseEntity.ok(MedicoService.findAllMedico());
+        return  ResponseEntity.ok(medicoService.findAllMedico());
     }
 
     @GetMapping("/medico/{id}")
