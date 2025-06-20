@@ -12,13 +12,13 @@ import java.util.Collection;
 
 
 @RestController
-@RequestMapping("essalud/citas")
+@RequestMapping("essalud/cita")
 public class CitaController {
 
     @Autowired
     CItaService citaService;
 
-    @GetMapping("/cita")
+    @GetMapping("/citas")
     public ResponseEntity<Collection<CitaResponse>> getCitas() {
         return ResponseEntity.ok(citaService.findAllCitas());
     }
