@@ -17,13 +17,13 @@ public class Cita {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_cita;
 
-	@Column(name = "fecha_cita")
+	@Column(name = "fecha_cita", length = 100)
 	private String fecha_cita;
 
-	@Column(name = "horario_cita")
+	@Column(name = "horario_cita", length = 100)
 	private String horario_cita;
 
-	@Column(name = "Estado_cita")
+	@Column(name = "Estado_cita", length = 50)
 	private String estado_cita;
 
 	@ManyToOne

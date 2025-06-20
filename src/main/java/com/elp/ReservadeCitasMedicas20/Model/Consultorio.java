@@ -18,10 +18,10 @@ public class Consultorio {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_consultorio;
 
-	@Column(name = "numero_consultorio")
+	@Column(name = "numero_consultorio", length = 2)
 	private Integer numero_consultorio;
 
-	@Column(name = "seccion_consultorio")
+	@Column(name = "seccion_consultorio", length = 100)
 	private String seccion_consultorio;
 
 	@OneToMany(mappedBy = "consultorio")

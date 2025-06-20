@@ -15,16 +15,16 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_usuario;
 	
-	@Column(name = "nombre_usuario")
+	@Column(name = "nombre_usuario", length = 100)
 	private String nombre_usuario;
 	
-	@Column(name = "email")
+	@Column(name = "email", length = 100, unique = true)
 	private String email;
 	
-	@Column(name = "contraseña")
+	@Column(name = "contraseña", length = 100)
 	private String contraseña;
 	
-	@Column(name = "rol")
+	@Column(name = "rol", length = 100)
 	private String rol;
 
 	public Long getId_usuario() {

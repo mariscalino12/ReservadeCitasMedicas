@@ -19,31 +19,31 @@ public class Paciente {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_paciente;
 
-	@Column(name = "DNI")
+	@Column(name = "DNI", length = 9, unique = true)
 	private String dni;
 
-	@Column(name = "nombre")
+	@Column(name = "nombre", length = 100)
 	private String nombre;
 
-	@Column(name = "apellido_paterno")
+	@Column(name = "apellido_paterno", length = 100)
 	private String apellido_paterno;
 
-	@Column(name = "apellido_materno")
+	@Column(name = "apellido_materno", length = 100)
 	private String apellido_materno;
 
-	@Column(name = "fecha_nacimiento")
+	@Column(name = "fecha_nacimiento", length = 100)
 	private LocalDate fecha_nacimiento;
 
-	@Column(name = "genero")
+	@Column(name = "genero", length = 20)
 	private String genero;
 
-	@Column(name = "direccion")
+	@Column(name = "direccion", length = 100)
 	private String direccion;
 
-	@Column(name = "telefono")
+	@Column(name = "telefono", length = 20, unique = true)
 	private String telefono;
 
-	@Column(name = "estado_asegurado")
+	@Column(name = "estado_asegurado", length = 2)
 	private String estado_asegurado;
 
 	@OneToMany(mappedBy = "paciente")

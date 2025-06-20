@@ -19,19 +19,19 @@ public class Medico {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_medico;
 
-	@Column(name = "nombre")
+	@Column(name = "nombre", length = 100)
 	private String nombre;
 
-	@Column(name = "apellido_paterno")
+	@Column(name = "apellido_paterno", length = 100)
 	private String apellido_paterno;
 
-	@Column(name = "apellido_materno")
+	@Column(name = "apellido_materno", length = 100)
 	private String apellido_materno;
 
-	@Column(name = "numero_colegiado")
+	@Column(name = "numero_colegiado", length = 10)
 	private Integer numero_colegiado;
 
-	@Column(name = "horario_atencion")
+	@Column(name = "horario_atencion", length = 100)
 	private String horario_atencion;
 
 	@OneToMany(mappedBy = "medico")
