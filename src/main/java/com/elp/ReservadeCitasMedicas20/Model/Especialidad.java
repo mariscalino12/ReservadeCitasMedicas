@@ -21,7 +21,7 @@ public class Especialidad {
 	private String nombre_especialidad;
 
 	@ManyToOne
-	@JoinColumn(name = "id_medico", insertable = false, updatable = false)
+	@JoinColumn(name = "id_medico")
 	private Medico medico;
 
 	public Long getId_especialidad() {
