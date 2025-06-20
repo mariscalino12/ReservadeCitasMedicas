@@ -20,6 +20,7 @@ public class EspecialidadMapper {
 				EspecialidadResponse especialidadResponse = new EspecialidadResponse();
 				especialidadResponse.setId_especialidad(especialidad.getId_especialidad());
 				especialidadResponse.setNombre_especialidad(especialidad.getNombre_especialidad());
+				especialidadResponse.setMedico(especialidad.getMedico());
 
 				listespecialidadResponses.add(especialidadResponse);
 			}
@@ -33,6 +34,7 @@ public class EspecialidadMapper {
 		if (especialidad != null) {
 			especialidadResponse.setId_especialidad(especialidad.getId_especialidad());
 			especialidadResponse.setNombre_especialidad(especialidad.getNombre_especialidad());
+			especialidadResponse.setMedico(especialidad.getMedico());
 		}
 		return especialidadResponse;
 	}

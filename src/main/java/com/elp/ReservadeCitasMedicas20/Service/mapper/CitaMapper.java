@@ -21,6 +21,9 @@ public class CitaMapper {
 				citaResponse.setFecha_cita(cita.getFecha_cita());
 				citaResponse.setHorario_cita(cita.getHorario_cita());
 				citaResponse.setEstado_cita(cita.getEstado_cita());
+				citaResponse.setConsultorio(cita.getConsultorio());
+				citaResponse.setMedico(cita.getMedico());
+				citaResponse.setPaciente(cita.getPaciente());
 
 				listcitaResponses.add(citaResponse);
 			}
@@ -35,6 +38,9 @@ public class CitaMapper {
 			citaResponse.setFecha_cita(cita.getFecha_cita());
 			citaResponse.setHorario_cita(cita.getHorario_cita());
 			citaResponse.setEstado_cita(cita.getEstado_cita());
+			citaResponse.setConsultorio(cita.getConsultorio());
+			citaResponse.setMedico(cita.getMedico());
+			citaResponse.setPaciente(cita.getPaciente());
 		}
 		return citaResponse;
 	}
