@@ -1,10 +1,8 @@
 package com.elp.ReservadeCitasMedicas20.Controller;
 
-import com.elp.ReservadeCitasMedicas20.Controller.dto.UsuarioRequest;
-import com.elp.ReservadeCitasMedicas20.Controller.dto.UsuarioResponse;
-
-
-import com.elp.ReservadeCitasMedicas20.Service.UsuarioService;
+import com.elp.ReservadeCitasMedicas20.Controller.dto.PacienteRequest;
+import com.elp.ReservadeCitasMedicas20.Controller.dto.PacienteResponse;
+import com.elp.ReservadeCitasMedicas20.Service.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,31 +15,31 @@ import java.util.Collection;
 public class PacienteController {
 
     @Autowired
-    UsuarioService usuarioService;
+    PacienteService pacienteService;
 
     @GetMapping("/pacientes")
-    public ResponseEntity<Collection<UsuarioResponse>> getUsuario(){
-        return  ResponseEntity.ok(usuarioService.findAllUsuario());
+    public ResponseEntity<Collection<PacienteResponse>> getPaciente(){
+        return  ResponseEntity.ok(pacienteService.findAllPaciente());
     }
 
     @GetMapping("/paciente/{id}")
-    public ResponseEntity<UsuarioResponse> getPacienteById(@PathVariable Long id){
-        return  ResponseEntity.ok(usuarioService.findByIdUsuario(id));
+    public ResponseEntity<PacienteResponse> getPacienteById(@PathVariable Long id){
+        return  ResponseEntity.ok(pacienteService.findByIdPaciente(id));
     }
 
     @PostMapping("/save/paciente")
-    public void savePacienteById(@RequestBody UsuarioRequest request){
-        usuarioService.saveUsuario(request);
+    public void savePacienteById(@RequestBody PacienteRequest request){
+    	pacienteService.savePaciente(request);
     }
 
     @PutMapping("/update/paciente/{id}")
-    public void updatePacientesById(@PathVariable Long id, @RequestBody UsuarioRequest request){
-        usuarioService.updateUusario(id, request);
+    public void updatePacientesById(@PathVariable Long id, @RequestBody PacienteRequest request){
+    	pacienteService.updatePaciente(id, request);
     }
 
     @DeleteMapping("/delete/paciente/{id}")
     public void deletePacientesById(@PathVariable Long id){
-        usuarioService.deleteUsuario(id);
+    	pacienteService.deletePaciente(id);
     }
 }
 
