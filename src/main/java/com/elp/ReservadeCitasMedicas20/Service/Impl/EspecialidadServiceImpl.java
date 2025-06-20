@@ -34,6 +34,7 @@ public class EspecialidadServiceImpl implements EspecialidadService{
 	public void saveEspecialidad(EspecialidadRequest request) {
 		Especialidad especiaidadNew =new Especialidad();
 		especiaidadNew.setNombre_especialidad(request.getNombre_especialidad());
+		especiaidadNew.setMedico(request.getMedico());
 		especialidadRepository.save(especiaidadNew);
 	}
 	@Override
@@ -41,6 +42,7 @@ public class EspecialidadServiceImpl implements EspecialidadService{
 		Especialidad especialidad = especialidadRepository.findById(Id).orElse(null);
 		if (especialidad != null) {
 			especialidad.setNombre_especialidad(request.getNombre_especialidad());
+			especialidad.setMedico(request.getMedico());
 			especialidadRepository.save(especialidad);
 		}
 		
