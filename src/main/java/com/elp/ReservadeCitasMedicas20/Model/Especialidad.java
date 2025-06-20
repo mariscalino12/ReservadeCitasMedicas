@@ -17,7 +17,7 @@ public class Especialidad {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_especialidad;
 
-	@Column(name = "nombre_especialidad")
+	@Column(name = "nombre_especialidad", length = 100)
 	private String nombre_especialidad;
 
 	@ManyToOne
